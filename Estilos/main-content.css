@@ -239,6 +239,7 @@
   border-radius: 50%;
 }
 
+/* CORREÇÃO AQUI */
 .card-text {
   display: flex;
   flex-direction: column;
@@ -253,6 +254,9 @@
   display: inline-block;
   max-width: 100%;
   vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .artist-name {
@@ -261,12 +265,17 @@
   font-size: 16px;
   font-weight: 700;
   padding-block-end: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .artist-categorie {
   color: #6a6a6a;
   font-weight: 400;
   font-size: 0.875rem;
+  white-space: normal; /* permite quebra de linha, evita deslocamentos */
+  margin-top: 4px;
 }
 
 .play {
