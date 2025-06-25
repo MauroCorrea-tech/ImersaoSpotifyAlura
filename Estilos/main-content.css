@@ -158,6 +158,13 @@ margin: 0 auto;
   border-radius: 8px;
 }
 
+/* Imagem do card preenchendo todo o espaço */
+.cards img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
 .cards span {
 padding: 16px;
 position: absolute;
@@ -214,14 +221,6 @@ background: rgb(60, 30, 80);
 }
 /* FIM COLOR CARDS */
 
-.offer__list-item img {
-position: absolute;
-right: 0;
-bottom: 0;
-height: auto;
-width: 107px;
-transform: rotate(25deg) translate(18%, -2%);
-}
 
 /* CARD ARTISTA */
 
