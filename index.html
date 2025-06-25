@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Spotify Imersão</title>
 
-    <link rel="stylesheet" href="Estilos/reset.css">
-    <link rel="stylesheet" href="Estilos/style.css">
-    <link rel="stylesheet" href="Estilos/var.css">
-    <link rel="stylesheet" href="Estilos/sidebar-footer.css">
-    <link rel="stylesheet" href="Estilos/main-content.css">
-    <link rel="stylesheet" href="Estilos/media-queries.css">
+    <!-- Seus arquivos CSS -->
+    <link rel="stylesheet" href="Estilos/reset.css" />
+    <link rel="stylesheet" href="Estilos/style.css" />
+    <link rel="stylesheet" href="Estilos/var.css" />
+    <link rel="stylesheet" href="Estilos/sidebar-footer.css" />
+    <link rel="stylesheet" href="Estilos/main-content.css" />
+    <link rel="stylesheet" href="Estilos/media-queries.css" />
 
+    <!-- Font Awesome para ícones -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
 </head>
-
 <body>
     <div class="sidebar">
         <nav class="sidebar_navigation">
             <div class="logo">
-                <a href="">
-                    <img src="Assets/icons/logo-spotify.png" alt="logotipo do spotify">
+                <a href="#">
+                    <img src="Assets/icons/logo-spotify.png" alt="logotipo do spotify" />
                 </a>
             </div>
             <ul>
                 <li>
-                    <a href="">
+                    <a href="#">
                         <span class="fa fa-home"></span>
                         <span>Início</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         <span class="fa fa-search"></span>
                         <span>Buscar</span>
                     </a>
@@ -45,7 +46,9 @@
                     <span class="fas fa-book"></span>
                     <span>Sua biblioteca</span>
                 </button>
-                <span class="fa fa-plus"></span>
+                <button class="library__add">
+                    <span class="fa fa-plus"></span>
+                </button>
             </div>
 
             <section class="section-playlist">
@@ -59,7 +62,7 @@
             </section>
 
             <div class="cookies">
-                <a href="">Cookies</a>
+                <a href="#">Cookies</a>
             </div>
             <div class="languages">
                 <button class="languages__button">
@@ -74,22 +77,28 @@
         <div class="main-container">
             <nav class="header__navigation">
                 <div class="navigation">
-                    <button class="arrow-left">
-                        <img src="Assets/icons/small-left.png" alt="seta esquerda">
+                    <button class="arrow-left" aria-label="Voltar">
+                        <img src="Assets/icons/small-left.png" alt="seta esquerda" />
                     </button>
-                    <button class="arrow-right">
-                        <img src="Assets/icons/small-right.png" alt="seta direita">
+                    <button class="arrow-right" aria-label="Avançar">
+                        <img src="Assets/icons/small-right.png" alt="seta direita" />
                     </button>
                 </div>
 
-                <div class="header__search">
-                    <img src="Assets/icons/search.png" alt="botao de pesquisa">
-                    <input id="search-input" type="text" maxlength="800" placeholder="O que você quer ouvir?">
+                <div class="header__search" role="search">
+                    <img src="Assets/icons/search.png" alt="Ícone de pesquisa" />
+                    <input
+                        id="search-input"
+                        type="search"
+                        maxlength="800"
+                        placeholder="O que você quer ouvir?"
+                        aria-label="Pesquisar músicas, artistas, podcasts"
+                    />
                 </div>
 
                 <div class="header__login">
-                    <button class="subscribe">Inscreva-se</button>
-                    <button class="login">Entrar</button>
+                    <button class="subscribe" type="button">Inscreva-se</button>
+                    <button class="login" type="button">Entrar</button>
                 </div>
             </nav>
 
@@ -100,114 +109,114 @@
                         <h2 class="session">Navegar por todas as seções</h2>
                     </div>
 
-                    <div class="offer__scroll-container">
+                    <div class="offer__scroll-container" tabindex="0" aria-label="Lista de playlists">
                         <div class="offer__list">
                             <section class="offer__list-item">
 
-                                <!-- Exemplo de card -->
+                                <!-- Cards das playlists -->
                                 <div class="cards card1">
-                                    <a href="#">
-                                        <img src="Assets/playlist/1.jpeg" alt="Boas festas" />
+                                    <a href="#" aria-label="Boas festas">
+                                        <img src="Assets/playlist/1.jpeg" alt="Capa playlist Boas festas" />
                                     </a>
-                                    <div class="card-label">Boas festas</div>
+                                    <div class="card-title">Boas festas</div>
                                 </div>
 
                                 <div class="cards card2">
-                                    <a href="#">
-                                        <img src="Assets/playlist/2.png" alt="Feitos para você" />
+                                    <a href="#" aria-label="Feitos para você">
+                                        <img src="Assets/playlist/2.png" alt="Capa playlist Feitos para você" />
                                     </a>
-                                    <div class="card-label">Feitos para você</div>
+                                    <div class="card-title">Feitos para você</div>
                                 </div>
 
                                 <div class="cards card3">
-                                    <a href="#">
-                                        <img src="Assets/playlist/3.jpeg" alt="Lançamentos" />
+                                    <a href="#" aria-label="Lançamentos">
+                                        <img src="Assets/playlist/3.jpeg" alt="Capa playlist Lançamentos" />
                                     </a>
-                                    <div class="card-label">Lançamentos</div>
+                                    <div class="card-title">Lançamentos</div>
                                 </div>
 
                                 <div class="cards card4">
-                                    <a href="#">
-                                        <img src="Assets/playlist/4.jpeg" alt="Creators" />
+                                    <a href="#" aria-label="Creators">
+                                        <img src="Assets/playlist/4.jpeg" alt="Capa playlist Creators" />
                                     </a>
-                                    <div class="card-label">Creators</div>
+                                    <div class="card-title">Creators</div>
                                 </div>
 
                                 <div class="cards card5">
-                                    <a href="#">
-                                        <img src="Assets/playlist/5.jpeg" alt="Para treinar" />
+                                    <a href="#" aria-label="Para treinar">
+                                        <img src="Assets/playlist/5.jpeg" alt="Capa playlist Para treinar" />
                                     </a>
-                                    <div class="card-label">Para treinar</div>
+                                    <div class="card-title">Para treinar</div>
                                 </div>
 
                                 <div class="cards card6">
-                                    <a href="#">
-                                        <img src="Assets/playlist/6.jpeg" alt="Podcasts" />
+                                    <a href="#" aria-label="Podcasts">
+                                        <img src="Assets/playlist/6.jpeg" alt="Capa playlist Podcasts" />
                                     </a>
-                                    <div class="card-label">Podcasts</div>
+                                    <div class="card-title">Podcasts</div>
                                 </div>
 
                                 <div class="cards card7">
-                                    <a href="#">
-                                        <img src="Assets/playlist/7.jpeg" alt="Sertanejo" />
+                                    <a href="#" aria-label="Sertanejo">
+                                        <img src="Assets/playlist/7.jpeg" alt="Capa playlist Sertanejo" />
                                     </a>
-                                    <div class="card-label">Sertanejo</div>
+                                    <div class="card-title">Sertanejo</div>
                                 </div>
 
                                 <div class="cards card8">
-                                    <a href="#">
-                                        <img src="Assets/playlist/8.jpeg" alt="Samba e pagode" />
+                                    <a href="#" aria-label="Samba e pagode">
+                                        <img src="Assets/playlist/8.jpeg" alt="Capa playlist Samba e pagode" />
                                     </a>
-                                    <div class="card-label">Samba e pagode</div>
+                                    <div class="card-title">Samba e pagode</div>
                                 </div>
 
                                 <div class="cards card9">
-                                    <a href="#">
-                                        <img src="Assets/playlist/9.jpeg" alt="Funk" />
+                                    <a href="#" aria-label="Funk">
+                                        <img src="Assets/playlist/9.jpeg" alt="Capa playlist Funk" />
                                     </a>
-                                    <div class="card-label">Funk</div>
+                                    <div class="card-title">Funk</div>
                                 </div>
 
                                 <div class="cards card10">
-                                    <a href="#">
-                                        <img src="Assets/playlist/10.jpeg" alt="MPB" />
+                                    <a href="#" aria-label="MPB">
+                                        <img src="Assets/playlist/10.jpeg" alt="Capa playlist MPB" />
                                     </a>
-                                    <div class="card-label">MPB</div>
+                                    <div class="card-title">MPB</div>
                                 </div>
 
                                 <div class="cards card11">
-                                    <a href="#">
-                                        <img src="Assets/playlist/11.jpeg" alt="Rock" />
+                                    <a href="#" aria-label="Rock">
+                                        <img src="Assets/playlist/11.jpeg" alt="Capa playlist Rock" />
                                     </a>
-                                    <div class="card-label">Rock</div>
+                                    <div class="card-title">Rock</div>
                                 </div>
 
                                 <div class="cards card12">
-                                    <a href="#">
-                                        <img src="Assets/playlist/12.jpeg" alt="Hip Hop" />
+                                    <a href="#" aria-label="Hip Hop">
+                                        <img src="Assets/playlist/12.jpeg" alt="Capa playlist Hip Hop" />
                                     </a>
-                                    <div class="card-label">Hip Hop</div>
+                                    <div class="card-title">Hip Hop</div>
                                 </div>
 
                                 <div class="cards card13">
-                                    <a href="#">
-                                        <img src="Assets/playlist/13.jpeg" alt="Indie" />
+                                    <a href="#" aria-label="Indie">
+                                        <img src="Assets/playlist/13.jpeg" alt="Capa playlist Indie" />
                                     </a>
-                                    <div class="card-label">Indie</div>
+                                    <div class="card-title">Indie</div>
                                 </div>
 
                                 <div class="cards card14">
-                                    <a href="#">
-                                        <img src="Assets/playlist/14.jpeg" alt="Relax" />
+                                    <a href="#" aria-label="Relax">
+                                        <img src="Assets/playlist/14.jpeg" alt="Capa playlist Relax" />
                                     </a>
-                                    <div class="card-label">Relax</div>
+                                    <div class="card-title">Relax</div>
                                 </div>
 
                                 <div class="cards card15">
-                                    <a href="#">
-                                        <img src="Assets/playlist/15.jpeg" alt="Música Latina" />
+                                    <a href="#" aria-label="Música Latina">
+                                        <img src="Assets/playlist/15.jpeg" alt="Capa playlist Música Latina" />
                                     </a>
-                                    <div class="card-label">Música Latina</div>
+                                    <div class="card-title">Música Latina</div>
                                 </div>
 
                             </section>
@@ -219,9 +228,9 @@
                     <div class="grid-container">
                         <div class="artist-card">
                             <div class="card-img">
-                                <img id="artist-img" class="artist-img" />
+                                <img id="artist-img" class="artist-img" alt="Imagem do artista" />
                                 <div class="play">
-                                    <span class="fa fa-solid fa-play"></span>
+                                    <span class="fa fa-play"></span>
                                 </div>
                             </div>
                             <div class="card-text">
