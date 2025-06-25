@@ -149,12 +149,13 @@ grid-gap: 32px;
 margin: 0 auto;
 }
 
+
 .cards {
-position: relative; 
-width: 220px;
-height: 200px;
-overflow: hidden;
-border-radius: 8px;
+  position: relative; 
+  width: 220px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .cards span {
